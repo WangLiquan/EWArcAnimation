@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         return button
     }()
     private var isOpen: Bool = false
+    private var isAnimationIng: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,11 +62,14 @@ class ViewController: UIViewController {
 
     @objc private func beginAnimation(){
 
+        guard self.isAnimationIng == false else { return }
+
         let transform1 = CGAffineTransform(rotationAngle: .pi/4)
         let transform2 = CGAffineTransform(rotationAngle: .pi/2)
         let transform3 = CGAffineTransform(rotationAngle: .pi/4*3)
 
-        UIView.animate(withDuration: 1.5) {
+        UIView.animateKeyframes(withDuration: 1.5, delay: 0, options: [.allowUserInteraction], animations: {
+            self.isAnimationIng = true
             if self.isOpen {
                 self.secondView.transform = CGAffineTransform.identity
                 self.thirdView.transform = CGAffineTransform.identity
@@ -75,15 +79,20 @@ class ViewController: UIViewController {
                 self.fourthView.alpha = 0
                 self.isOpen = !self.isOpen
             } else {
+                UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
+                    self.secondView.alpha = 1
+                    self.thirdView.alpha = 1
+                    self.fourthView.alpha = 1
+                })
                 self.secondView.transform = transform1
                 self.thirdView.transform = transform2
                 self.fourthView.transform = transform3
-                self.secondView.alpha = 1
-                self.thirdView.alpha = 1
-                self.fourthView.alpha = 1
                 self.isOpen = !self.isOpen
             }
+        }) { (bool) in
+            self.isAnimationIng = false
         }
+
     }
 
 }
