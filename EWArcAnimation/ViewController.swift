@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         drawMyView()
     }
-    private func drawMyView(){
+    private func drawMyView() {
         self.view.addSubview(firstView)
         self.view.addSubview(secondView)
         self.view.addSubview(thirdView)
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         self.view.addSubview(button)
     }
 
-    @objc private func beginAnimation(){
+    @objc private func beginAnimation() {
 
         guard self.isAnimationIng == false else { return }
 
@@ -92,11 +92,10 @@ class ViewController: UIViewController {
                 self.fourthView.transform = transform3
                 self.isOpen = !self.isOpen
             }
-        }) { (bool) in
+        }) { (_) in
             self.isAnimationIng = false
         }
 
     }
 
 }
-
