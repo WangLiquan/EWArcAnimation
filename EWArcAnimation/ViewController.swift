@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     private let firstView: UIImageView = {
         let view = UIImageView(frame: CGRect(x: 200, y: 500, width: 120.6, height: 94.5))
         view.alpha = 0
-        view.image = UIImage(named: "bai")
+        view.image = UIImage(named: "pink")
         return view
     }()
     private let secondView: UIImageView = {
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }()
     private let thirdView: UIImageView = {
         let view = UIImageView(frame: CGRect(x: 200, y: 500, width: 120.6, height: 94.5))
-        view.image = UIImage(named: "bai")
+        view.image = UIImage(named: "pink")
         view.alpha = 0
         return view
     }()
@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         self.view.addSubview(secondView)
         self.view.addSubview(thirdView)
         self.view.addSubview(fourthView)
+        firstView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
         secondView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
         thirdView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
         fourthView.layer.anchorPoint = CGPoint(x: 1, y: 0.5)
@@ -74,12 +75,14 @@ class ViewController: UIViewController {
                 self.secondView.transform = CGAffineTransform.identity
                 self.thirdView.transform = CGAffineTransform.identity
                 self.fourthView.transform = CGAffineTransform.identity
+                self.firstView.alpha = 0
                 self.secondView.alpha = 0
                 self.thirdView.alpha = 0
                 self.fourthView.alpha = 0
                 self.isOpen = !self.isOpen
             } else {
                 UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2, animations: {
+                    self.firstView.alpha = 1
                     self.secondView.alpha = 1
                     self.thirdView.alpha = 1
                     self.fourthView.alpha = 1
