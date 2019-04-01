@@ -1,4 +1,6 @@
 # EWArcAnimation
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
 Swift扇形View展开关闭动画
 
 ### 实现思路:
