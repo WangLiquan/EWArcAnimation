@@ -14,6 +14,8 @@
 		796066F9224A04A500218A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796066F7224A04A500218A8A /* LaunchScreen.storyboard */; };
 		79606704224A04A500218A8A /* EWArcAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79606703224A04A500218A8A /* EWArcAnimationTests.swift */; };
 		7960670F224A04A500218A8A /* EWArcAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7960670E224A04A500218A8A /* EWArcAnimationUITests.swift */; };
+		84193E492255E94D0039C6A6 /* EWArcAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84193E482255E94D0039C6A6 /* EWArcAnimationView.swift */; };
+		84193E4B2255EB800039C6A6 /* EWToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84193E4A2255EB800039C6A6 /* EWToast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7960670A224A04A500218A8A /* EWArcAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EWArcAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7960670E224A04A500218A8A /* EWArcAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWArcAnimationUITests.swift; sourceTree = "<group>"; };
 		79606710224A04A500218A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84193E482255E94D0039C6A6 /* EWArcAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EWArcAnimationView.swift; sourceTree = "<group>"; };
+		84193E4A2255EB800039C6A6 /* EWToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWToast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		796066ED224A049500218A8A /* EWArcAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				84193E4A2255EB800039C6A6 /* EWToast.swift */,
 				796066EE224A049500218A8A /* AppDelegate.swift */,
 				796066F0224A049500218A8A /* ViewController.swift */,
+				84193E482255E94D0039C6A6 /* EWArcAnimationView.swift */,
 				796066F2224A049500218A8A /* Main.storyboard */,
 				796066F5224A04A500218A8A /* Assets.xcassets */,
 				796066F7224A04A500218A8A /* LaunchScreen.storyboard */,
@@ -279,6 +285,8 @@
 			files = (
 				796066F1224A049500218A8A /* ViewController.swift in Sources */,
 				796066EF224A049500218A8A /* AppDelegate.swift in Sources */,
+				84193E492255E94D0039C6A6 /* EWArcAnimationView.swift in Sources */,
+				84193E4B2255EB800039C6A6 /* EWToast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
