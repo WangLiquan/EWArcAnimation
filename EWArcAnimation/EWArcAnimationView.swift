@@ -11,14 +11,14 @@ import UIKit
 class EWArcAnimationView: UIView {
 
     /// 点击分类按钮回调,返回分类
-    var backType: ((String) -> ())?
+    var backType: ((String) -> Void)?
 
     private var isAnimationIng: Bool = false
-    
+
     private lazy var homeButton: EWArcAnimationSubImageView = {
         let view = EWArcAnimationSubImageView(frame:CGRect(x: 60.3, y: 69, width: 120.6, height: 94.5), title: "首页", image: "ArcAnimation_home", backImage: "ArcAnimation_white")
         view.backClick = { [weak self] in
-            if self?.backType != nil{
+            if self?.backType != nil {
                 self?.backType!("首页")
             }
         }
@@ -27,7 +27,7 @@ class EWArcAnimationView: UIView {
     private lazy var nameButton: EWArcAnimationSubImageView = {
         let view = EWArcAnimationSubImageView(frame:CGRect(x: 60.3, y: 69, width: 120.6, height: 94.5), title: "姓名", image: "ArcAnimation_name", backImage: "ArcAnimation_pink")
         view.backClick = { [weak self] in
-            if self?.backType != nil{
+            if self?.backType != nil {
                 self?.backType!("姓名")
             }
         }
@@ -36,7 +36,7 @@ class EWArcAnimationView: UIView {
     private lazy var industrybutton: EWArcAnimationSubImageView = {
         let view = EWArcAnimationSubImageView(frame:CGRect(x: 60.3, y: 69, width: 120.6, height: 94.5), title: "行业", image: "ArcAnimation_industry", backImage: "ArcAnimation_white")
         view.backClick = { [weak self] in
-            if self?.backType != nil{
+            if self?.backType != nil {
                 self?.backType!("行业")
             }
         }
@@ -45,7 +45,7 @@ class EWArcAnimationView: UIView {
     private lazy var locationButton: EWArcAnimationSubImageView = {
         let view = EWArcAnimationSubImageView(frame:CGRect(x: 60.3, y: 69, width: 120.6, height: 94.5), title: "地址", image: "ArcAnimation_location", backImage: "ArcAnimation_pink")
         view.backClick = { [weak self] in
-            if self?.backType != nil{
+            if self?.backType != nil {
                 self?.backType!("地址")
             }
         }
@@ -57,7 +57,7 @@ class EWArcAnimationView: UIView {
         button.setImage(UIImage(named: "CircleSelect_select"), for: .selected)
         return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         drawMyView()
@@ -65,7 +65,7 @@ class EWArcAnimationView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     private func drawMyView() {
         self.addSubview(homeButton)
         self.addSubview(nameButton)
@@ -78,7 +78,7 @@ class EWArcAnimationView: UIView {
         setingButton.isSelected = !setingButton.isSelected
         if setingButton.isSelected {
             show()
-        }else {
+        } else {
             hidden()
         }
     }
@@ -108,9 +108,9 @@ class EWArcAnimationView: UIView {
             /// 结束时设置动画进行中状态为False
             self.isAnimationIng = false
         }
-        
+
     }
-    @objc private func hidden(){
+    @objc private func hidden() {
         /// 保证动画在非进行中
         guard self.isAnimationIng == false else { return }
         /// 关键帧动画
@@ -136,7 +136,7 @@ class EWArcAnimationView: UIView {
 
 extension EWArcAnimationView {
     class EWArcAnimationSubImageView: UIImageView {
-        public var backClick: (()->())?
+        public var backClick: (()->Void)?
         private let imageView: UIImageView = {
             let imageView = UIImageView(frame: CGRect(x: 5, y: 30.75, width: 33, height: 33))
             imageView.transform = CGAffineTransform(rotationAngle: -.pi/2)
@@ -153,7 +153,7 @@ extension EWArcAnimationView {
             let button = UIButton(frame: CGRect(x: 0, y: 22.25, width: 60, height: 50))
             return button
         }()
-        
+
         override init(frame: CGRect) {
             super.init(frame: frame)
             drawMyView()
@@ -168,7 +168,7 @@ extension EWArcAnimationView {
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
-        private func drawMyView(){
+        private func drawMyView() {
             self.alpha = 0
             self.layer.anchorPoint = CGPoint(x: 1, y: 0.485)
             self.isUserInteractionEnabled = true
@@ -177,7 +177,7 @@ extension EWArcAnimationView {
             self.addSubview(button)
             button.addTarget(self, action: #selector(onClickSubButton), for: .touchUpInside)
         }
-        @objc private func onClickSubButton(){
+        @objc private func onClickSubButton() {
             if backClick != nil {
                 backClick!()
             }
