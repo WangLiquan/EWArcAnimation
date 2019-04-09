@@ -200,13 +200,16 @@
 				TargetAttributes = {
 					796066EA224A049500218A8A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					796066FE224A04A500218A8A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 796066EA224A049500218A8A;
 					};
 					79606709224A04A500218A8A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 796066EA224A049500218A8A;
 					};
 				};
@@ -470,7 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -488,7 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -508,7 +511,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWArcAnimation.app/EWArcAnimation";
 			};
@@ -529,7 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EWArcAnimation.app/EWArcAnimation";
 			};
@@ -549,7 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EWArcAnimation;
 			};
@@ -569,7 +572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ethan.EWArcAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = EWArcAnimation;
 			};

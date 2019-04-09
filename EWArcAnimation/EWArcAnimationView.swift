@@ -136,7 +136,7 @@ class EWArcAnimationView: UIView {
 
 extension EWArcAnimationView {
     class EWArcAnimationSubImageView: UIImageView {
-        public var backClick: (()->Void)?
+        public var backClick: ( () -> Void )?
         private let imageView: UIImageView = {
             let imageView = UIImageView(frame: CGRect(x: 5, y: 30.75, width: 33, height: 33))
             imageView.transform = CGAffineTransform(rotationAngle: -.pi/2)
